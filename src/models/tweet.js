@@ -1,19 +1,22 @@
 import mongoose from "mongoose";
-import { ObjectId } from "bson";
 
 const tweetSchema = new mongoose.Schema({
-    content :{
+    content: {
         type: String,
-        required : true
+        required: true
     },
-    likes : {
-        type: Number
-    },
-    noOfRetweets : {
+    likes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Like'
+        }
+    ],
+    noOfRetweets: {
         type: Number
     },
     comment: {
-        type: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comment'
     }
 })
 

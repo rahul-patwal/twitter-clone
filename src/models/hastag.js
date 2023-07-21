@@ -1,17 +1,17 @@
 import mongoose from "mongoose";
 
 const hashtagSchema = new mongoose.Schema({
-    text :{
+    text: {
         type: String,
         required: true,
         unique: true
     },
-    tweets :
-    [
-        {
-        type: mongoose.Schema.ObjectId,
-        }
-    ],
+    tweets:
+        [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+            }
+        ],
 
 })
 

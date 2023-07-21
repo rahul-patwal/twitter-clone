@@ -6,7 +6,8 @@ const router = express.Router();
 
 router.post('/tweets', createTweet);
 router.get('/tweets/:id', getTweet);
-router.post('/signUp', signUp)
+router.post('/signUp', signUp);
+
 
 
 

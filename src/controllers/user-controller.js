@@ -5,6 +5,7 @@ import UserService from "../services/user-service.js";
 export const signUp = async ( req,res ) => {
     try{
         const data = req.body;
+        console.log("inside user-controller", data);
         const response = await userService.signUp(data);
         
 

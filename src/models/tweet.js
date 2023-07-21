@@ -3,7 +3,8 @@ import { ObjectId } from "bson";
 
 const tweetSchema = new mongoose.Schema({
     content :{
-        type: String
+        type: String,
+        required : true
     },
     likes : {
         type: Number
@@ -12,7 +13,7 @@ const tweetSchema = new mongoose.Schema({
         type: Number
     },
     comment: {
-        type: ObjectId
+        type: String
     }
 })
 
